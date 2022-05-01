@@ -1,4 +1,5 @@
 class PostOffice:
+    
     """A Post Office class. Allows users to message each other.
 
     Parameters
@@ -15,11 +16,17 @@ class PostOffice:
     """
 
     def __init__(self, usernames):
+        
+        """
+        Intiation
+        """
         self.message_id = 0
         self.boxes = {user: [] for user in usernames}
 
     def send_message(self, sender, recipient, title, message_body, urgent=False):
-        """Send a message to a recipient.
+        
+        """
+        Send a message to a recipient.
 
         Parameters
         ----------
@@ -72,6 +79,7 @@ class PostOffice:
         return self.message_id
 
     def read_inbox(self, receiver, N):
+        
         """
         :param receiver:
         :param N: number of message to return
@@ -88,6 +96,7 @@ class PostOffice:
         return message_list
 
     def search_inbox(self, receiver, search_string):
+        
         """
         :param receiver:
         :param search_string: string
