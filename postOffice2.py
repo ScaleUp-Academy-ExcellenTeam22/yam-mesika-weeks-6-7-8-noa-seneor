@@ -1,5 +1,7 @@
 class Message:
+    
     """
+    
     Class representing a message
     Parameters
     ----------
@@ -26,6 +28,10 @@ class Message:
         message already seen or not
     """
     def __init__(self, sender, id, title, body):
+        
+        """
+        Initiation
+        """
         self.id = id
         self.title = title
         self.body = body
@@ -33,6 +39,7 @@ class Message:
         self.seen = False
 
     def __str__(self):
+        
         """
         :return: return the presentation of the message
         """
@@ -41,6 +48,7 @@ class Message:
         return s
 
     def __repr__(self):
+        
         """
         Magic Function to use __str__
         :return: __str__()
@@ -48,6 +56,7 @@ class Message:
         return self.__str__()
 
     def len(self):
+        
         """
         :return: message length
         """
@@ -55,7 +64,9 @@ class Message:
 
 
 class PostOffice:
-    """A Post Office class. Allows users to message each other.
+    
+    """
+    A Post Office class. Allows users to message each other.
 
     Parameters
     ----------
@@ -75,7 +86,9 @@ class PostOffice:
         self.boxes = {user: [] for user in usernames}
 
     def send_message(self, sender, recipient, message_body, title, urgent=False):
-        """Send a message to a recipient.
+        
+        """
+        Send a message to a recipient.
 
         Parameters
         ----------
@@ -116,6 +129,7 @@ class PostOffice:
         return self.message_id
 
     def read_inbox(self, receiver, N):
+        
         """
         :param receiver:
         :param N: number of message to return
@@ -132,6 +146,7 @@ class PostOffice:
         return message_list
 
     def search_inbox(self, receiver, search_string):
+        
         """
         :param receiver:
         :param search_string: string
